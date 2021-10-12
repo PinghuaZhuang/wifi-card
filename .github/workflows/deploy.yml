@@ -3,6 +3,7 @@ name: Deploy to GitHub Pages WIFI-QRCODE
 on:
   push:
     branches: [ wifi-qrcode ]
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -10,13 +11,11 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.1
-        with:
-          ref: old-blog
 
       - name: Install and Build
         run: |
-          npm ci
-          npm run build
+          yarn
+          yarn build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5
