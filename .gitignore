@@ -22,8 +22,6 @@ yarn-error.log*
 *.log
 *.bak
 
-yarn.lock
-package-lock.json
 .eslintcache
 lib
 typings
