@@ -1,5 +1,7 @@
 # wifi-qrcode
 
+[![Deploy to GitHub Pages WIFI-QRCODE](https://github.com/PinghuaZhuang/wifi-card/actions/workflows/deploy.yml/badge.svg)](https://github.com/PinghuaZhuang/wifi-card/actions/workflows/deploy.yml)
+
 输入 WIFI 名称密码, 快捷生成二维码. 安卓苹果(IOS 13+)扫码链接.
 
 技术栈: vite + vue3.0
