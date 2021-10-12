@@ -1,0 +1,42 @@
+{
+  "name": "wifi-qrcode",
+  "version": "0.1.0",
+  "private": true,
+  "description": "WIFI-QRCOD wifi转二维码, IOS|Android 扫码连接.",
+  "homepage": "https://github.com/PinghuaZhuang/wifi-card",
+  "bugs": {
+    "url": "https://github.com/PinghuaZhuang/wifi-card/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:PinghuaZhuang/wifi-card.git"
+  },
+  "license": "MIT",
+  "author": "zphua2016@gmail.com",
+  "main": "/packages/@zstark/wifi-qrcode",
+  "workspaces": [
+    "packages/@zstark/*"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "build:all": "yarn build:lib && vite build",
+    "build:lib": "yarn workspaces run build:lib",
+    "dev": "vite",
+    "serve": "vite preview",
+    "sort": "sort-package-json package.json && yarn workspaces run sort"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "sort-package-json": "^1.52.0",
+    "vue": "^3.2.16"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.9.3",
+    "vite": "^2.6.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "npmClient": "yarn",
+  "useWorkspaces": true
+}
