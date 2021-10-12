@@ -1,0 +1,28 @@
+name: Deploy to GitHub Pages WIFI-QRCODE
+
+on:
+  push:
+    branches: [ wifi-qrcode ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+        with:
+          ref: old-blog
+
+      - name: Install and Build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          repository-name: PinghuaZhuang/PingHuaZhuang.github.io
+          branch: master
+          folder: dist
+          target-folder: wifi
+          token: ${{ secrets.TOKEN }}
