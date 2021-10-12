@@ -2,7 +2,7 @@
   "name": "@zstark/wifi-qrcode",
   "version": "0.1.0",
   "private": true,
-  "description": "WIFI-QRCOD wifi转二维码, IOS|Android 扫码连接.",
+  "description": "输入 WIFI 名称密码, 快捷生成二维码. 安卓苹果(IOS 13+)扫码链接.",
   "homepage": "https://github.com/PinghuaZhuang/wifi-card",
   "bugs": {
     "url": "https://github.com/PinghuaZhuang/wifi-card/issues"
