@@ -26,6 +26,7 @@
     "sort": "sort-package-json package.json && yarn workspaces run sort"
   },
   "dependencies": {
+    "autoprefixer": "^10.3.7",
     "lodash": "^4.17.21",
     "sort-package-json": "^1.52.0",
     "vue": "^3.2.16"

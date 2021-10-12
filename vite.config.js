@@ -10,6 +10,14 @@ export default defineConfig(async ({ command, mode }) => {
   const config = {
     // serve 独有配置
     // plugins: [vue()],
+    base: './',
+    css: {
+      postcss: {
+          plugins: [
+              require('autoprefixer')
+          ]
+      }
+    },
     build: {
       sourcemap: true,
       // brotliSize: false,
