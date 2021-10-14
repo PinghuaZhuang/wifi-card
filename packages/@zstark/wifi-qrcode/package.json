@@ -1,7 +1,6 @@
 {
   "name": "@zstark/wifi-qrcode",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
   "description": "输入 WIFI 名称密码, 快捷生成二维码. 安卓苹果(IOS 13+)扫码链接.",
   "homepage": "https://github.com/PinghuaZhuang/wifi-card",
   "bugs": {
@@ -22,6 +21,7 @@
     "build": "vite build",
     "build:lib": "vite build --mode lib --config ../../../vite.config.js",
     "dev": "vite",
+    "publish": "yarn build:lib && lerna publish --no-verify-access",
     "serve": "vite preview",
     "sort": "sort-package-json package.json"
   },

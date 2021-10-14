@@ -22,6 +22,7 @@
     "build:all": "yarn build:lib && vite build",
     "build:lib": "yarn workspaces run build:lib",
     "dev": "vite",
+    "publish": "yarn workspaces run publish",
     "serve": "vite preview",
     "sort": "sort-package-json package.json && yarn workspaces run sort"
   },
