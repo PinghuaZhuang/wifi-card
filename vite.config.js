@@ -54,8 +54,8 @@ export default defineConfig(async ({ command, mode }) => {
         lib: {
           entry: resolve('./packages/@zstark/wifi-qrcode/index.js'),
           // formats: 'umd',
-          name: 'wifiQR',
-          fileName: 'wifiQR',
+          name: 'createWifiQRCode',
+          fileName: 'createWifiQRCode',
         },
         rollupOptions: {
           output: {

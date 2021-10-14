@@ -29,9 +29,9 @@ yarn build:all
 - [x] @zstark/wifi-qrcode:
 
   ```js
-  import createWifiQr from '@zstark/wifi-qrcode'
+  import createWifiQRCode from '@zstark/wifi-qrcode'
 
-  createWifiQr({
+  createWifiQRCode({
       ssid: string, // Network SSID name
       password: string,
       encryptionMode: string, // Settings: Network encryption mode

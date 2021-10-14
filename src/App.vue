@@ -9,7 +9,6 @@ import Home from './views/home/index.vue'
 </template>
 
 <style>
-/* @import url("~@/style/variables.less"); */
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
