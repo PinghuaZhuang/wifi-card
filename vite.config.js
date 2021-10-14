@@ -1,6 +1,11 @@
 import { defineConfig } from 'vite'
 import merge from 'lodash/merge'
+import path from 'path'
 // import vue from '@vitejs/plugin-vue'
+
+function resolve(url) {
+  return path.resolve(__dirname, url)
+}
 
 // https://vitejs.dev/config/
 export default defineConfig(async ({ command, mode }) => {
@@ -10,7 +15,13 @@ export default defineConfig(async ({ command, mode }) => {
   const config = {
     // serve 独有配置
     // plugins: [vue()],
-    base: './',
+    // base: './',
+    // resolve: {
+    //   alias: {
+    //     '@packages': './packages',
+    //     '@': './src',
+    //   },
+    // },
     css: {
       postcss: {
           plugins: [
@@ -27,20 +38,31 @@ export default defineConfig(async ({ command, mode }) => {
   if (isLib) {
     merge(config, {
       publicDir: false,
-      // resolve: {
-      //   // monorepos依赖去重
-      //   dedupe: [
-      //     'lodash',
-      //     '@zstark/wifi-qrcode'
-      //   ],
-      // },
+      resolve: {
+        alias: {
+          '@packages': resolve('./packages'),
+          '@': resolve('./src')
+        },
+        // monorepos依赖去重
+        // dedupe: [
+        //   'lodash',
+        //   '@zstark/wifi-qrcode'
+        // ],
+      },
       build: {
-        outDir: './packages/@zstark/wifi-qrcode/dist',
+        outDir: resolve('./packages/@zstark/wifi-qrcode/dist'),
         lib: {
-          entry: './packages/@zstark/wifi-qrcode/index.js',
+          entry: resolve('./packages/@zstark/wifi-qrcode/index.js'),
           // formats: 'umd',
           name: 'wifiQR',
           fileName: 'wifiQR',
+        },
+        rollupOptions: {
+          output: {
+            globals: {
+              QRCode: true,
+            }
+          },
         },
       }
     })

@@ -20,7 +20,7 @@
   ],
   "scripts": {
     "build": "vite build",
-    "build:lib": "vite build --mode lib",
+    "build:lib": "vite build --mode lib --config ../../../vite.config.js",
     "dev": "vite",
     "serve": "vite preview",
     "sort": "sort-package-json package.json"

@@ -26,11 +26,11 @@ yarn build:all
 
 ## 📌 模块
 
-- [x] @zstark/wifi-qrcode: 
+- [x] @zstark/wifi-qrcode:
 
   ```js
   import createWifiQr from '@zstark/wifi-qrcode'
-  
+
   createWifiQr({
       ssid: string, // Network SSID name
       password: string,
@@ -39,5 +39,3 @@ yarn build:all
   })
   // => `WIFI:T:${settings.encryptionMode};S:${settings.ssid};P:${settings.password};H:${settings.hiddenSSID};`
   ```
-
-  
